@@ -1,8 +1,8 @@
-async function homeHandler(req, res) {
+async function projectsHandler(req, res) {
     try {
         res.status(200).json({
             code: 200,
-            message: "Home Page"
+            message: "Projects Page"
         });
     } catch(err) {
         res.status(500).json({
@@ -15,4 +15,4 @@ async function homeHandler(req, res) {
     }
 }
 
-export { homeHandler }
+export { projectsHandler }

@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 
 import { homeRouter } from "./routes/home.router.js";
+import { projectsRouter } from "./routes/projects.router.js";
 //import { connectDb } from "./db/connect.db.js";
 //import { syncModel } from "./db/model.db.js";
 
@@ -16,6 +17,7 @@ app.use(cors({
 app.use(express.json());
 
 app.use("/", homeRouter);
+app.use("/projects", projectsRouter);
 
 async function startServer() {
     //await connectDb();
